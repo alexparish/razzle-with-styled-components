@@ -8,6 +8,11 @@ module.exports = {
       appConfig.plugins.push(new BundleAnalyzerPlugin());
     }
 
+    appConfig.resolve.alias = {
+      react: "preact-compat",
+      "react-dom": "preact-compat"
+    };
+
     return appConfig;
   }
 };
